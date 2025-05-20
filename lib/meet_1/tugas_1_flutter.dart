@@ -21,8 +21,13 @@ class HalamanProfilSederhana extends StatelessWidget {
         //mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Nama: Andi Rahmat ', style: TextStyle(fontSize: 25)),
-          Row(children: [Icon(Icons.location_on), Text('Nama Kota: Jakarta')]),
+          Text('Andi Rahmat ', style: TextStyle(fontSize: 25)),
+          Row(
+            children: [
+              Icon(Icons.location_on),
+              Text('Nama Kota: Jakarta', style: TextStyle(fontSize: 18)),
+            ],
+          ),
           Text('Seorang pelajar yang sedang belajar Flutter'),
         ],
       ),
