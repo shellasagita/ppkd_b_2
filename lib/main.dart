@@ -6,6 +6,7 @@ import 'package:ppkd_b_2/meet_2/tugas_2_flutter.dart';
 import 'package:ppkd_b_2/meet_3/meet_3a.dart';
 import 'package:ppkd_b_2/meet_4/meet_4a.dart';
 import 'package:ppkd_b_2/meet_4/tugas_3_flutter.dart';
+import 'package:ppkd_b_2/meet_4/tugas_4_flutter.dart';
 // import 'package:ppkd_b_2/meet_2/meet_2.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Tugas3FormulirGaleri(),
+      home: const Tugas4DaftarProduk(),
     );
   }
 }
