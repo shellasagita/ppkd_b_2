@@ -8,7 +8,7 @@ class Tugas4DaftarProduk extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffFF76CE),
-        title: Text("Travelpedia"),
+        title: Text("TRAVELPEDIA"),
         centerTitle: true,
       ),
       body: ListView(
@@ -17,7 +17,7 @@ class Tugas4DaftarProduk extends StatelessWidget {
           Center(
             child: Text(
               "Formulir Pengguna",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
 
@@ -91,6 +91,14 @@ class Tugas4DaftarProduk extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 12),
+          Center(
+            child: Text(
+              "Daftar Produk",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+          SizedBox(height: 12),
           Card(
             child: ListTile(
               leading: Icon(Icons.image),
