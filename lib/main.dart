@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/meet_1/meet_1.dart';
 import 'package:ppkd_b_2/meet_1/tugas_1_flutter.dart';
+import 'package:ppkd_b_2/meet_11/login_screen.dart';
+import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
+import 'package:ppkd_b_2/tugas_7_flutter/2modegelap.dart';
+import 'package:ppkd_b_2/tugas_7_flutter/3kategoriproduk.dart';
+import 'package:ppkd_b_2/tugas_7_flutter/4tanggallahir.dart';
+import 'package:ppkd_b_2/tugas_7_flutter/5aturpengingat.dart';
+import 'package:ppkd_b_2/tugas_7_flutter/tugas_7_flutter.dart';
 import 'package:ppkd_b_2/meet_2/meet_2.dart';
 import 'package:ppkd_b_2/meet_2/tugas_2_flutter.dart';
 import 'package:ppkd_b_2/meet_3/meet_3a.dart';
@@ -23,12 +30,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // initialRoute: "/",
+      // routes: {
+      //   //Harus didaftarkan dulu disini
+      //   "/": (context) => LoginScreen(),
+      //   "/meet_2": (context) => MeetDua(),
+      //   MeetTigaA.id: (context) => MeetTigaA(),
+      // },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Tugas6DesainFigma(),
+      home: const Tugas7FormInputInteraktifDrawer(),
     );
   }
 }

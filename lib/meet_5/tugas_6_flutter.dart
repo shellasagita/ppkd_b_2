@@ -230,7 +230,11 @@ class _Tugas6DesainFigmaState extends State<Tugas6DesainFigma> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset('assets/images/btnSigninwithGoogle1.png'),
+                          Image.asset(
+                            'assets/images/Google.png',
+                            width: 20,
+                            height: 20,
+                          ),
                           SizedBox(width: 10),
                           Text(
                             'Google',
@@ -258,7 +262,11 @@ class _Tugas6DesainFigmaState extends State<Tugas6DesainFigma> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset('assets/images/btnSigninwithFb1.png'),
+                          Image.asset(
+                            'assets/images/Fb.png',
+                            height: 20,
+                            width: 20,
+                          ),
                           SizedBox(width: 10),
                           Text(
                             'Facebook',
