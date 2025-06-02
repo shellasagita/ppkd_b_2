@@ -17,6 +17,10 @@ import 'package:ppkd_b_2/meet_4/tugas_4_flutter.dart';
 import 'package:ppkd_b_2/meet_5/meet_5.dart';
 import 'package:ppkd_b_2/meet_5/tugas_5_flutter.dart';
 import 'package:ppkd_b_2/meet_5/tugas_6_flutter.dart';
+import 'package:ppkd_b_2/tugas_7_flutter/tugas_8_flutter.dart';
+import 'package:ppkd_b_2/tugas_9_flutter.dart/list.dart';
+import 'package:ppkd_b_2/tugas_9_flutter.dart/list_of_map.dart';
+import 'package:ppkd_b_2/tugas_9_flutter.dart/tugas_9_flutter.dart';
 // import 'package:ppkd_b_2/meet_2/meet_2.dart';
 
 void main() {
@@ -42,7 +46,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Tugas7FormInputInteraktifDrawer(),
+      home: const MapKategoriProduk(),
     );
   }
 }

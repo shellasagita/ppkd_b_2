@@ -20,7 +20,13 @@ class _Tugas7FormInputInteraktifDrawerState
     extends State<Tugas7FormInputInteraktifDrawer> {
   // Navigation index for Drawer
   int _selectedIndex = 0;
-
+  // static const List<Widget> _screen = [
+  //     // Center(child: Text("Home Screen")),
+  //     MeetDuaBelasC(),
+  //     Meet12AInputWidget(),
+  //     // MeetSatu(),
+  //     MeetEmpatA(),
+  //   ];
   bool isDarkMode = false;
 
   void _toggleDarkMode(bool value) {
@@ -228,30 +234,31 @@ class _Tugas7FormInputInteraktifDrawerState
           },
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (value) {
-          setState(() {
-            _selectedIndex = value;
-          });
-          print("Halaman saat ini : $_selectedIndex");
-        },
-        currentIndex: _selectedIndex,
-        selectedItemColor: AppColor.army1,
-        unselectedItemColor: AppColor.gray88,
-        unselectedLabelStyle: AppStyle.fontBold(
-          fontSize: 10,
-        ).copyWith(color: AppColor.gray88),
-        selectedLabelStyle: AppStyle.fontBold(
-          fontSize: 10,
-        ).copyWith(color: AppColor.army1),
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.info_outline),
-            label: "Tentang",
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   onTap: (value) {
+      //     setState(() {
+      //       _selectedIndex = value;
+      //     });
+      //     print("Halaman saat ini : $_selectedIndex");
+      //   },
+      //   currentIndex: _selectedIndex,
+      //   selectedItemColor: AppColor.redbata,
+      //   unselectedItemColor: AppColor.black22,
+      //   unselectedLabelStyle: AppStyle.fontBold(
+      //     fontSize: 10,
+      //   ).copyWith(color: AppColor.black22),
+      //   selectedLabelStyle: AppStyle.fontBold(
+      //     fontSize: 10,
+      //   ).copyWith(color: AppColor.black22),
+      //   items: [
+      //     BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.info_outline),
+      //       label: "Tentang",
+
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
