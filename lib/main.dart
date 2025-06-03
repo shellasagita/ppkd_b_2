@@ -23,6 +23,10 @@ import 'package:ppkd_b_2/tugas_9_flutter.dart/list.dart';
 import 'package:ppkd_b_2/tugas_9_flutter.dart/list_of_map.dart';
 import 'package:ppkd_b_2/tugas_9_flutter.dart/tugas_9_flutter.dart';
 // import 'package:ppkd_b_2/meet_2/meet_2.dart';
+import 'package:ppkd_b_2/meet_12/meet_12a.dart';
+import 'package:ppkd_b_2/meet_12/meet_12b.dart';
+import 'package:ppkd_b_2/meet_12/meet_12c.dart';
+import 'package:ppkd_b_2/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,19 +39,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // initialRoute: "/",
+      initialRoute: "/",
       // routes: {
       //   //Harus didaftarkan dulu disini
       //   "/": (context) => LoginScreen(),
+      //   "/.": (context) => SplashScreen(),
+      //   "/login": (context) => LoginScreen(),
       //   "/meet_2": (context) => MeetDua(),
       //   MeetTigaA.id: (context) => MeetTigaA(),
+      //   Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
       // },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const FormulirKelasPendaftaranKelas(),
+      home: const Tugas10FormulirKelasPendaftaranKelas(),
     );
   }
 }
