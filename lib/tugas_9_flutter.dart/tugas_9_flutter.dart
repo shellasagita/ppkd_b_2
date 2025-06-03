@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:ppkd_b_2/constant/app_color.dart';
 import 'package:ppkd_b_2/tugas_9_flutter.dart/list.dart';
 import 'package:ppkd_b_2/tugas_9_flutter.dart/list_of_map.dart';
+import 'package:ppkd_b_2/tugas_9_flutter.dart/model_urutan_nama.dart';
 
 class Tugas9ListKategoriProduk extends StatefulWidget {
   const Tugas9ListKategoriProduk({super.key});
@@ -48,7 +49,12 @@ class _MyWidgetState extends State<Tugas9ListKategoriProduk> {
             ),
             SizedBox(height: 12),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ModelSepatu()),
+                );
+              },
               child: Text('Model Berdasarkan Nama'),
             ),
           ],

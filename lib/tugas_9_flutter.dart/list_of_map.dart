@@ -21,7 +21,7 @@ class _MapKategoriProdukState extends State<MapKategoriProduk> {
     },
     {
       'nama': 'Sayuran',
-      'icon': Icons.local_grocery_store_outlined,
+      'icon': Icons.local_florist,
       'deskripsi': 'bebas petisida',
     },
     {
@@ -31,7 +31,7 @@ class _MapKategoriProdukState extends State<MapKategoriProduk> {
     },
     {
       'nama': 'Pakaian Pria',
-      'icon': Icons.add_shopping_cart_sharp,
+      'icon': Icons.man_3_sharp,
       'deskripsi': 'ramah lingkungan',
     },
     // {'nama': 'Pakaian Wanita'},
@@ -64,24 +64,27 @@ class _MapKategoriProdukState extends State<MapKategoriProduk> {
       body: ListView.builder(
         itemCount: dataiconKategori.length,
         itemBuilder: (BuildContext context, int index) {
+          final item = dataiconKategori[index];
           return ListTile(
-            leading: Text(
-              '${index + 1}',
-              style: AppStyle.fontBold(fontSize: 16),
+            leading: Row(
+              mainAxisSize:
+                  MainAxisSize
+                      .min, // important to prevent Row from taking full width
+              children: [
+                Text('${index + 1}. ', style: AppStyle.fontBold(fontSize: 16)),
+                Icon(item['icon'], color: Colors.red),
+              ],
             ),
-            title: Text("${dataiconKategori[index]["nama"]}"),
-            subtitle: Text("${dataiconKategori[index]["deskripsi"]}"),
-            trailing: IconButton(
-              onPressed: () {
+            title: Text(item['nama']),
+            subtitle: Text(item['deskripsi'] ?? ''),
+            onTap: () {
+              if (item.containsKey('route')) {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => dataiconKategori[index]["route"],
-                  ),
+                  MaterialPageRoute(builder: (context) => item['route']),
                 );
-              },
-              icon: Icon(dataiconKategori[index]["icon"], color: Colors.red),
-            ),
+              }
+            },
           );
         },
       ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/meet_1/meet_1.dart';
 import 'package:ppkd_b_2/meet_1/tugas_1_flutter.dart';
 import 'package:ppkd_b_2/meet_11/login_screen.dart';
+import 'package:ppkd_b_2/tugas_10_flutter/tugas_10_flutter.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/2modegelap.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/3kategoriproduk.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MapKategoriProduk(),
+      home: const FormulirKelasPendaftaranKelas(),
     );
   }
 }
