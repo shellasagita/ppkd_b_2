@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/constant/app_color.dart';
+import 'package:ppkd_b_2/constant/app_style.dart';
+import 'package:ppkd_b_2/helper/preference.dart';
 import 'package:ppkd_b_2/tugas_10_flutter/thankspage.dart';
 
 class Tugas10FormulirKelasPendaftaranKelas extends StatefulWidget {
@@ -19,7 +21,7 @@ class _Tugas10FormulirKelasPendaftaranKelasState
   final _formKey = GlobalKey<FormState>();
   bool isFormValid = false;
   @override
-  Widget build(BuildContext context, dynamic appcolor) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Formulir Pendaftaran Kelas Flutter'),
@@ -105,55 +107,108 @@ class _Tugas10FormulirKelasPendaftaranKelasState
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     print("Berhasil");
-                    // dialogSuccess(context);
+
+                    dialogSucess(context);
                   }
                 },
-                child: Text('Daftar'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColor.yellow1,
+                  minimumSize: Size(double.infinity, 40),
+                ),
+                child: Text(
+                  'Daftar',
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    color: AppColor.black22,
+                  ),
+                ),
+                // SizedBox(height: 20),
+
+                //   SizedBox(
+                //     width: double.infinity,
+                //     child: ElevatedButton(style: ElevatedButton.styleFrom( backgroundColor: AppColor.yellow1,
+                //             padding: EdgeInsets.symmetric(vertical: 12),
+                //             disabledBackgroundColor: Colors.grey.shade500,),
+                //       onPressed: isFormValid? () { showDialog(context: context, builder: (context) {
+                //         return AlertDialog(
+                //           title: Text('Berhasil'),
+                //           content: Column(
+                //             mainAxisSize: MainAxisSize.min,
+                //             children: [Text('Nama lengkap : ${_nameController.text}',
+                //             ), Text('Email : ${_emailController.text}'),
+                //             Text('Email : ${_phoneController.text}'),
+                //             Text('Email : ${_cityController.text}'),
+                //             ]
+                //           ),
+                //           actions: [
+                //             TextButton(onPressed: () {
+                //               Navigator.pop(context);
+                //             },
+                //             child: Text('Tutup'),
+                //             ),
+                //             TextButton(onPressed: () {
+                //               Navigator.push(context, MaterialPageRoute(builder: (context) => Thankspage()));
+
+                //             }, child: Text('Lanjut'))
+                //           ],
+
+                //         );
+                //       },
+                //       );
+
+                //     }
+                //     child: Text('Lanjut'))
+                //   )
+                // ],
               ),
-              SizedBox(height: 20,),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(style: ElevatedButton.styleFrom( backgroundColor: AppColor.yellow1,
-                        padding: EdgeInsets.symmetric(vertical: 12),
-                        disabledBackgroundColor: Colors.grey.shade500,),
-                  onPressed: isFormValid? () { showDialog(context: context, builder: (context) {
-                    return AlertDialog(
-                      title: Text('Berhasil'),
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [Text('Nama lengkap : ${_nameController.text}',
-                        ), Text('Email : ${_emailController.text}'),
-                        Text('Email : ${_phoneController.text}'),
-                        Text('Email : ${_cityController.text}'),
-                        ]
-                      ),
-                      actions: [
-                        TextButton(onPressed: () {
-                          Navigator.pop(context);
-                        }, 
-                        child: Text('Tutup'),
-                        ),
-                        TextButton(onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Thankspage()));
-
-                        }, child: Text('Lanjut'))
-                      ],
-
-                    );
-                  },
-                  );
-                  
-                }
-                child: Text('Lanjut'))
-              )
             ],
-            
           ),
-          
         ),
-        
       ),
-      
+    );
+  }
+
+  Future<dynamic> dialogSucess(BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Berhasil'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('Nama lengkap : ${_nameController.text}'),
+              Text('Email : ${_emailController.text}'),
+              Text('Phone : ${_phoneController.text}'),
+              Text('Kota Domisili : ${_cityController.text}'),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Tutup'),
+            ),
+            TextButton(
+              onPressed: () {
+                PreferenceHandler.saveLogin(true);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => Thankspage(
+                          name: _nameController.text,
+                          city: _cityController.text,
+                        ),
+                  ),
+                );
+              },
+              child: Text('Lanjut'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

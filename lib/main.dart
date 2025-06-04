@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/meet_1/meet_1.dart';
 import 'package:ppkd_b_2/meet_1/tugas_1_flutter.dart';
 import 'package:ppkd_b_2/meet_11/login_screen.dart';
+import 'package:ppkd_b_2/meet_16_shella/register_screen_app.dart';
+import 'package:ppkd_b_2/meet_16_shella/login_screen_app.dart';
 import 'package:ppkd_b_2/tugas_10_flutter/tugas_10_flutter.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/2modegelap.dart';
@@ -39,13 +41,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/",
+      initialRoute: "/login", //jgn lupa ganti balik jdi /
+      routes: {
+        //tugas10
+        //Harus didaftarkan dulu disini
+        // "/": (context) => SplashScreen(),
+        "/login": (context) => Tugas10FormulirKelasPendaftaranKelas(),
+
+        "/meet_2": (context) => MeetDua(),
+        LoginScreenApp.id: (context) => LoginScreenApp(),
+        RegisterScreenApp.id: (context) => RegisterScreenApp(),
+        MeetTigaA.id: (context) => MeetTigaA(),
+        Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
+      },
       // routes: {
       //   //Harus didaftarkan dulu disini
-      //   "/": (context) => LoginScreen(),
-      //   "/.": (context) => SplashScreen(),
+      //   "/": (context) => SplashScreen(),
       //   "/login": (context) => LoginScreen(),
       //   "/meet_2": (context) => MeetDua(),
+      //   LoginScreenApp.id: (context) => LoginScreenApp(),
+      //   RegisterScreenApp.id: (context) => RegisterScreenApp(),
       //   MeetTigaA.id: (context) => MeetTigaA(),
       //   Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
       // },
@@ -54,10 +69,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Tugas10FormulirKelasPendaftaranKelas(),
+      // home: const Tugas10FormulirKelasPendaftaranKelas(),
     );
   }
 }
+// routes: {
+//         //Harus didaftarkan dulu disini
+//         "/": (context) => LoginScreen(),
+//         "/.": (context) => SplashScreen(),
+//         "/login": (context) => LoginScreen(),
+//         "/meet_2": (context) => MeetDua(),
+//         MeetTigaA.id: (context) => MeetTigaA(),
+//         Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
+//       },
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});

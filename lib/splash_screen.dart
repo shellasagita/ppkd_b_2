@@ -3,6 +3,7 @@ import 'package:ppkd_b_2/constant/app_image.dart';
 import 'package:ppkd_b_2/constant/app_style.dart';
 import 'package:ppkd_b_2/helper/preference.dart';
 import 'package:ppkd_b_2/meet_12/meet_12b.dart';
+import 'package:ppkd_b_2/meet_16_shella/login_screen_app.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,15 +17,21 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 3), () async {
       bool isLogin = await PreferenceHandler.getLogin();
       print("isLogin: $isLogin");
-      if (isLogin) {
-        return Navigator.pushNamedAndRemoveUntil(
-          context,
-          MeetDuaBelasB.id,
-          (route) => false,
-        );
-      } else {
-        Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
-      }
+      // if (isLogin) {
+      //   return Navigator.pushNamedAndRemoveUntil(
+      //     context,
+      //     MeetDuaBelasB.id,
+      //     (route) => false,
+      //   );
+      // } else {
+
+      // }
+      //nanti nyalain lagi setelah tugas 10
+      // Navigator.pushNamedAndRemoveUntil(
+      //   context,
+      //   LoginScreenApp.id,
+      //   (route) => false,
+      // );
     });
   }
 
