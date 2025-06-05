@@ -10,7 +10,7 @@ class DbHelper {
       join(dbPath, 'ppkd_b_2.db'),
       onCreate: (db, version) {
         return db.execute(
-          'CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, username TEXT, email TEXT, phone TEXT, password TEXT)',
+          '''CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, username TEXT, email TEXT, phone TEXT, password TEXT)''',
         );
       },
     );
@@ -36,7 +36,7 @@ class DbHelper {
       where: 'email = ? AND password = ?',
       whereArgs: [email, password],
     );
-    if (data.isEmpty) {
+    if (data.isNotEmpty) {
       return UserModel.fromMap(data.first);
     } else {
       return null;

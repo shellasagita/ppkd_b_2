@@ -27,11 +27,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
       // }
       //nanti nyalain lagi setelah tugas 10
-      // Navigator.pushNamedAndRemoveUntil(
-      //   context,
-      //   LoginScreenApp.id,
-      //   (route) => false,
-      // );
+      Navigator.pushNamedAndRemoveUntil(
+        context,
+        LoginScreenApp.id,
+        (route) => false,
+      );
     });
   }
 

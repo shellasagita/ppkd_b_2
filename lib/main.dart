@@ -4,6 +4,7 @@ import 'package:ppkd_b_2/meet_1/tugas_1_flutter.dart';
 import 'package:ppkd_b_2/meet_11/login_screen.dart';
 import 'package:ppkd_b_2/meet_16_shella/register_screen_app.dart';
 import 'package:ppkd_b_2/meet_16_shella/login_screen_app.dart';
+import 'package:ppkd_b_2/study_case_1_sqflite/siswa.dart';
 import 'package:ppkd_b_2/tugas_10_flutter/tugas_10_flutter.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/2modegelap.dart';
@@ -41,29 +42,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/login", //jgn lupa ganti balik jdi /
+      initialRoute: "/",
       routes: {
-        //tugas10
         //Harus didaftarkan dulu disini
-        // "/": (context) => SplashScreen(),
-        "/login": (context) => Tugas10FormulirKelasPendaftaranKelas(),
-
-        "/meet_2": (context) => MeetDua(),
-        LoginScreenApp.id: (context) => LoginScreenApp(),
-        RegisterScreenApp.id: (context) => RegisterScreenApp(),
-        MeetTigaA.id: (context) => MeetTigaA(),
-        Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
+        "/": (context) => SplashScreen(),
+        SiswaApp.id: (context) => SiswaApp(),
+        // "/login": (context) => LoginScreen(),
+        // "/meet_2": (context) => MeetDua(),
+        // LoginScreenApp.id: (context) => LoginScreenApp(),
+        // RegisterScreenApp.id: (context) => RegisterScreenApp(),
+        // MeetTigaA.id: (context) => MeetTigaA(),
+        // Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
       },
-      // routes: {
-      //   //Harus didaftarkan dulu disini
-      //   "/": (context) => SplashScreen(),
-      //   "/login": (context) => LoginScreen(),
-      //   "/meet_2": (context) => MeetDua(),
-      //   LoginScreenApp.id: (context) => LoginScreenApp(),
-      //   RegisterScreenApp.id: (context) => RegisterScreenApp(),
-      //   MeetTigaA.id: (context) => MeetTigaA(),
-      //   Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
-      // },
+
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(

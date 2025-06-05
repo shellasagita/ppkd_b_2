@@ -311,6 +311,7 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
                                   backgroundColor: AppColor.army1,
                                 ),
                               );
+                              Navigator.pop(context);
                             }
                             // setState(() {});
                           },
