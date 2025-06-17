@@ -10,6 +10,7 @@ import 'package:ppkd_b_2/tugas_7_flutter/5aturpengingat.dart';
 
 class Tugas7FormInputInteraktifDrawer extends StatefulWidget {
   const Tugas7FormInputInteraktifDrawer({super.key});
+  static const String id = '/tugas_7_form_input_interaktif_drawer';
 
   @override
   State<Tugas7FormInputInteraktifDrawer> createState() =>

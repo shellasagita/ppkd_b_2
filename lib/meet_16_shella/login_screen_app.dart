@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/meet_16_shella/database/db_helper.dart';
 import 'package:ppkd_b_2/meet_16_shella/register_screen_app.dart';
+import 'package:ppkd_b_2/meet_22/view/user_list_screen.dart';
+import 'package:ppkd_b_2/tugas_14_flutter/view/fake_store_screen.dart';
 
 class LoginScreenApp extends StatefulWidget {
   const LoginScreenApp({super.key});
@@ -173,6 +175,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
                           shape: StadiumBorder(),
                         ),
                         onPressed: () async {
+                          Navigator.pushNamed(context, FakeStoreScreen.id);
                           final userData = await DbHelper.login(
                             emailController.text,
                             passwordController.text,

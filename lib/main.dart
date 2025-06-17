@@ -4,8 +4,10 @@ import 'package:ppkd_b_2/meet_1/tugas_1_flutter.dart';
 import 'package:ppkd_b_2/meet_11/login_screen.dart';
 import 'package:ppkd_b_2/meet_16_shella/register_screen_app.dart';
 import 'package:ppkd_b_2/meet_16_shella/login_screen_app.dart';
+import 'package:ppkd_b_2/meet_22/view/user_list_screen.dart';
 import 'package:ppkd_b_2/study_case_1_sqflite/siswa.dart';
 import 'package:ppkd_b_2/tugas_10_flutter/tugas_10_flutter.dart';
+import 'package:ppkd_b_2/tugas_14_flutter/view/fake_store_screen.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/2modegelap.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/3kategoriproduk.dart';
@@ -46,7 +48,14 @@ class MyApp extends StatelessWidget {
       routes: {
         //Harus didaftarkan dulu disini
         "/": (context) => SplashScreen(),
-        SiswaApp.id: (context) => SiswaApp(),
+        // SiswaApp.id: (context) => SiswaApp(),
+        LoginScreenApp.id: (context) => LoginScreenApp(),
+        // RegisterScreenApp.id: (context) => RegisterScreenApp(),
+        // Tugas7FormInputInteraktifDrawer.id:
+        // (context) => Tugas7FormInputInteraktifDrawer(),
+        // UserListScreen.id: (context) => UserListScreen(),
+        FakeStoreScreen.id: (context) => FakeStoreScreen(),
+
         // "/login": (context) => LoginScreen(),
         // "/meet_2": (context) => MeetDua(),
         // LoginScreenApp.id: (context) => LoginScreenApp(),
