@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
 
 class DropDownKategoriProduk extends StatefulWidget {
   const DropDownKategoriProduk({super.key});

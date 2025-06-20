@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/constant/app_color.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ppkd_b_2/constant/app_style.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
 import 'package:ppkd_b_2/tugas_7_flutter/2modegelap.dart';

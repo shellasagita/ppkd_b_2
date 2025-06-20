@@ -4,8 +4,6 @@ import 'package:ppkd_b_2/constant/app_image.dart';
 import 'package:ppkd_b_2/constant/app_style.dart';
 import 'package:ppkd_b_2/helper/preference.dart';
 import 'package:ppkd_b_2/meet_11/login_screen.dart';
-import 'package:ppkd_b_2/meet_14/meet_a/meet_14a.dart';
-import 'package:ppkd_b_2/meet_14/meet_b/validator_widget.dart';
 
 class MeetDuaBelasC extends StatefulWidget {
   const MeetDuaBelasC({super.key});

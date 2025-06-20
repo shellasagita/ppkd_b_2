@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/constant/app_image.dart';
 import 'package:ppkd_b_2/constant/app_style.dart';
 import 'package:ppkd_b_2/helper/preference.dart';
-import 'package:ppkd_b_2/meet_12/meet_12b.dart';
 import 'package:ppkd_b_2/meet_16_shella/login_screen_app.dart';
+import 'package:ppkd_b_2/tugas_15_flutter/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //nanti nyalain lagi setelah tugas 10
       Navigator.pushNamedAndRemoveUntil(
         context,
-        LoginScreenApp.id,
+        LoginScreenApi.id,
         (route) => false,
       );
     });

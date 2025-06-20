@@ -1,7 +1,6 @@
 import 'package:path/path.dart';
 import 'package:ppkd_b_2/study_case_1_sqflite/model/pendataan%20_siswa.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:sqflite/sqlite_api.dart';
 
 class DBHelper1 {
   static Future<Database> db() async {

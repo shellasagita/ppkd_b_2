@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/meet_16_shella/database/db_helper.dart';
 import 'package:ppkd_b_2/meet_16_shella/register_screen_app.dart';
 import 'package:ppkd_b_2/tugas_14_flutter/view/fake_store_screen.dart';
+import 'package:ppkd_b_2/tugas_15_flutter/register_screen.dart';
 
-class LoginScreenApp extends StatefulWidget {
-  const LoginScreenApp({super.key});
-  static const String id = '/login_screen_app';
+class LoginScreenApi extends StatefulWidget {
+  const LoginScreenApi({super.key});
+  static const String id = '/login_screen_api';
   @override
-  State<LoginScreenApp> createState() => _LoginScreenAppState();
+  State<LoginScreenApi> createState() => _LoginScreenApiState();
 }
 
-class _LoginScreenAppState extends State<LoginScreenApp> {
+class _LoginScreenApiState extends State<LoginScreenApi> {
   bool isPasswordVisible = false;
   get onPressed => null;
   final TextEditingController emailController = TextEditingController();
@@ -234,7 +235,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, RegisterScreenApp.id);
+                        Navigator.pushNamed(context, RegisterScreenAPI.id);
                         // setState(() {});
                       },
                     ),

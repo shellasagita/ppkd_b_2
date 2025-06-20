@@ -1,37 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_b_2/meet_1/meet_1.dart';
-import 'package:ppkd_b_2/meet_1/tugas_1_flutter.dart';
-import 'package:ppkd_b_2/meet_11/login_screen.dart';
-import 'package:ppkd_b_2/meet_16_shella/register_screen_app.dart';
-import 'package:ppkd_b_2/meet_16_shella/login_screen_app.dart';
-import 'package:ppkd_b_2/meet_22/view/user_list_screen.dart';
-import 'package:ppkd_b_2/study_case_1_sqflite/siswa.dart';
-import 'package:ppkd_b_2/tugas_10_flutter/tugas_10_flutter.dart';
-import 'package:ppkd_b_2/tugas_14_flutter/view/fake_store_screen.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/1syaratketentuan.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/2modegelap.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/3kategoriproduk.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/4tanggallahir.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/5aturpengingat.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/tugas_7_flutter.dart';
-import 'package:ppkd_b_2/meet_2/meet_2.dart';
-import 'package:ppkd_b_2/meet_2/tugas_2_flutter.dart';
-import 'package:ppkd_b_2/meet_3/meet_3a.dart';
-import 'package:ppkd_b_2/meet_4/meet_4a.dart';
-import 'package:ppkd_b_2/meet_4/tugas_3_flutter.dart';
-import 'package:ppkd_b_2/meet_4/tugas_4_flutter.dart';
-import 'package:ppkd_b_2/meet_5/meet_5.dart';
-import 'package:ppkd_b_2/meet_5/tugas_5_flutter.dart';
-import 'package:ppkd_b_2/meet_5/tugas_6_flutter.dart';
-import 'package:ppkd_b_2/tugas_7_flutter/tugas_8_flutter.dart';
-import 'package:ppkd_b_2/tugas_9_flutter.dart/list.dart';
-import 'package:ppkd_b_2/tugas_9_flutter.dart/list_of_map.dart';
-import 'package:ppkd_b_2/tugas_9_flutter.dart/tugas_9_flutter.dart';
-// import 'package:ppkd_b_2/meet_2/meet_2.dart';
-import 'package:ppkd_b_2/meet_12/meet_12a.dart';
-import 'package:ppkd_b_2/meet_12/meet_12b.dart';
-import 'package:ppkd_b_2/meet_12/meet_12c.dart';
 import 'package:ppkd_b_2/splash_screen.dart';
+import 'package:ppkd_b_2/tugas_11_flutter/produk_toko.dart';
+import 'package:ppkd_b_2/tugas_15_flutter/login_screen.dart';
+import 'package:ppkd_b_2/tugas_15_flutter/register_screen.dart';
+// import 'package:ppkd_b_2/meet_2/meet_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,35 +17,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: "/",
+
       routes: {
-        //Harus didaftarkan dulu disini
+        //   //Harus didaftarkan dulu disini
         "/": (context) => SplashScreen(),
-        // SiswaApp.id: (context) => SiswaApp(),
-        LoginScreenApp.id: (context) => LoginScreenApp(),
-        // RegisterScreenApp.id: (context) => RegisterScreenApp(),
-        // Tugas7FormInputInteraktifDrawer.id:
-        // (context) => Tugas7FormInputInteraktifDrawer(),
-        // UserListScreen.id: (context) => UserListScreen(),
-        FakeStoreScreen.id: (context) => FakeStoreScreen(),
+        LoginScreenApi.id: (context) => LoginScreenApi(),
+        RegisterScreenAPI.id: (context) => RegisterScreenAPI(),
+        // RegisterScreenAPI.id: (context) => RegisterScreenAPI()
+        //   // SiswaApp.id: (context) => SiswaApp(),
+        //   LoginScreenApp.id: (context) => LoginScreenApp(),
+        //   // RegisterScreenApp.id: (context) => RegisterScreenApp(),
+        //   // Tugas7FormInputInteraktifDrawer.id:
+        //   // (context) => Tugas7FormInputInteraktifDrawer(),
+        //   // UserListScreen.id: (context) => UserListScreen(),
+        //   FakeStoreScreen.id: (context) => FakeStoreScreen(),
 
-        // "/login": (context) => LoginScreen(),
-        // "/meet_2": (context) => MeetDua(),
-        // LoginScreenApp.id: (context) => LoginScreenApp(),
-        // RegisterScreenApp.id: (context) => RegisterScreenApp(),
-        // MeetTigaA.id: (context) => MeetTigaA(),
-        // Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
+        //   // "/login": (context) => LoginScreen(),
+        //   // "/meet_2": (context) => MeetDua(),
+        //   // LoginScreenApp.id: (context) => LoginScreenApp(),
+        //   // RegisterScreenApp.id: (context) => RegisterScreenApp(),
+        //   // MeetTigaA.id: (context) => MeetTigaA(),
+        //   // Meet12AInputWidget.id: (context) => Meet12AInputWidget(),
       },
-
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      // home: const Tugas10FormulirKelasPendaftaranKelas(),
+      // home: const Tugas11WishListBelanja(),
     );
   }
 }
 // routes: {
+
 //         //Harus didaftarkan dulu disini
 //         "/": (context) => LoginScreen(),
 //         "/.": (context) => SplashScreen(),

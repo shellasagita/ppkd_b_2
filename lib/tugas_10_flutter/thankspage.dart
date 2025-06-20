@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Thankspage extends StatefulWidget {
   const Thankspage({super.key, required this.name, required this.city});

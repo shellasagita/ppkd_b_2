@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ppkd_b_2/tugas_14_flutter/model/users_store_model.dart';
 
 class ProductDetailScreen extends StatelessWidget {

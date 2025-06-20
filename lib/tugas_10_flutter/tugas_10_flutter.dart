@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/constant/app_color.dart';
-import 'package:ppkd_b_2/constant/app_style.dart';
 import 'package:ppkd_b_2/helper/preference.dart';
 import 'package:ppkd_b_2/tugas_10_flutter/thankspage.dart';
 
@@ -95,6 +94,7 @@ class _Tugas10FormulirKelasPendaftaranKelasState
                   if (value == null || value.isEmpty) {
                     return "Kota Domisili tidak boleh kosong";
                   }
+                  return null;
                 },
                 decoration: InputDecoration(
                   labelText: 'Kota Domisili',

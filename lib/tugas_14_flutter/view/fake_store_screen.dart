@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:ppkd_b_2/meet_22/API/meet_22.dart';
-import 'package:ppkd_b_2/meet_22/model/users_model.dart';
 import 'package:ppkd_b_2/tugas_14_flutter/API/tugas_14.dart';
 import 'package:ppkd_b_2/tugas_14_flutter/model/users_store_model.dart';
 import 'package:ppkd_b_2/tugas_14_flutter/view/product_detail_screen.dart';
