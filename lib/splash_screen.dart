@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_b_2/constant/app_image.dart';
 import 'package:ppkd_b_2/constant/app_style.dart';
 import 'package:ppkd_b_2/helper/preference.dart';
-import 'package:ppkd_b_2/meet_16_shella/login_screen_app.dart';
 import 'package:ppkd_b_2/tugas_15_flutter/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -50,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Spacer(),
 
-            Image.asset(AppImage.pisang),
+            Image.asset("assets/images/meme-kucing.jpg"),
             SizedBox(height: 20),
             Text("Pisang App", style: AppStyle.fontBold()),
             Spacer(),

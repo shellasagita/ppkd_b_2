@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_b_2/splash_screen.dart';
-import 'package:ppkd_b_2/tugas_11_flutter/produk_toko.dart';
 import 'package:ppkd_b_2/tugas_15_flutter/login_screen.dart';
+import 'package:ppkd_b_2/tugas_15_flutter/profil_screen.dart';
 import 'package:ppkd_b_2/tugas_15_flutter/register_screen.dart';
 // import 'package:ppkd_b_2/meet_2/meet_2.dart';
 
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => SplashScreen(),
         LoginScreenApi.id: (context) => LoginScreenApi(),
         RegisterScreenAPI.id: (context) => RegisterScreenAPI(),
+        ProfilUserScreen.id: (context) => ProfilUserScreen(),
         // RegisterScreenAPI.id: (context) => RegisterScreenAPI()
         //   // SiswaApp.id: (context) => SiswaApp(),
         //   LoginScreenApp.id: (context) => LoginScreenApp(),

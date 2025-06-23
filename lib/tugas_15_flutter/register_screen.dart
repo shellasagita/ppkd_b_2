@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_b_2/constant/app_color.dart';
-import 'package:ppkd_b_2/meet_16_shella/database/db_helper.dart';
-import 'package:ppkd_b_2/meet_16_shella/model/user_model.dart';
 import 'package:ppkd_b_2/tugas_15_flutter/api/user_api.dart';
 
 class RegisterScreenAPI extends StatefulWidget {
@@ -264,7 +261,7 @@ class _RegisterScreenAPIState extends State<RegisterScreenAPI> {
                     controller: passwordController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter some text';
+                        return 'Min. 8 chars incl uppercase, lowercase, number & symbol';
                       }
                       return null;
                     },
@@ -284,6 +281,8 @@ class _RegisterScreenAPIState extends State<RegisterScreenAPI> {
                       ),
                       filled: true,
                       fillColor: Colors.white,
+                      // labelText:
+                      //     'at least 8 characters long, uppercase, lowercase, number and symbol',
                       hintText: ' Enter your password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(32),
