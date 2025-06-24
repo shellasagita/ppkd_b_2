@@ -10,6 +10,24 @@ class ProfilUserScreen extends StatefulWidget {
 }
 
 class _ProfilUserScreenState extends State<ProfilUserScreen> {
+  Map<String, dynamic>? _userData;
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadProfile();
+  }
+
+  void _loadProfile() async {
+    setState(() => _isLoading = true);
+    final profile = await UserService().getProfile();
+    setState(() {
+      _userData = profile["data"];
+      _isLoading = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,14 +63,21 @@ class _ProfilUserScreenState extends State<ProfilUserScreen> {
                                 child: Text('Cancel'),
                               ),
                               ElevatedButton(
-                                onPressed: () {
-                                  // Save logic here
-                                  // For example, call an API to update the name
-                                  UserService().updateProfile(
-                                    // name: nameController.text,
-                                  );
-                                  Navigator.of(context).pop();
-                                  setState(() {});
+                                onPressed: () async {
+                                  bool success = await UserService()
+                                      .updateProfile(nameController.text);
+                                  if (success) {
+                                    Navigator.of(context).pop();
+                                    setState(
+                                      () {},
+                                    ); // Memicu FutureBuilder untuk getProfile lagi
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text('Gagal update nama'),
+                                      ),
+                                    );
+                                  }
                                 },
                                 child: Text('Save'),
                               ),

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 import 'package:ppkd_b_2/helper/preference.dart';
 import 'package:ppkd_b_2/tugas_15_flutter/endpoint.dart';
@@ -71,22 +73,26 @@ class UserService {
     }
   }
 
-  Future<Map<String, dynamic>> updateProfile() async {
+  Future<bool> updateProfile(String name) async {
     String? token = await PreferenceHandler.getToken();
-    final response = await http.get(
-      Uri.parse(Endpoint.profile),
-      headers: {"Accept": "application/json", "Authorization": "Bearer $token"},
+
+    final response = await http.put(
+      Uri.parse(Endpoint.updateProfile), // Tambahkan endpoint baru ini
+      headers: {
+        "Accept": "application/json",
+        "Authorization": "Bearer $token",
+        "Content-Type": "application/json",
+      },
+      body: jsonEncode({"name": name}),
     );
-    print(response.body);
-    print(response.body);
+
+    print("Update response: ${response.body}");
+
     if (response.statusCode == 200) {
-      print(updateProfileResponseFromJson(response.body).toJson());
-      return updateProfileResponseFromJson(response.body).toJson();
-    } else if (response.statusCode == 422) {
-      return registerErrorResponseFromJson(response.body).toJson();
+      return true; // sukses update
     } else {
-      print("Failed to register user: ${response.statusCode}");
-      throw Exception("Failed to register user: ${response.statusCode}");
+      print("Update failed: ${response.statusCode}");
+      return false; // gagal update
     }
   }
 }
